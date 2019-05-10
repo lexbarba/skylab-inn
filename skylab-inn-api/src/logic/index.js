@@ -18,6 +18,8 @@ const logic = {
     cloud_name: null,
     api_key: null,
     api_secret: null,
+    email: null,
+    email_password: null,
 
     /**
      * Register a user.
@@ -64,8 +66,8 @@ const logic = {
             const transporter = nodemailer.createTransport({
                 service: 'gmail',
                 auth: {
-                    user: 'skylabinn@gmail.com',
-                    pass: 'Skylabinn123'
+                    user: this.email,
+                    pass: this.email_password
                 }
             })
 

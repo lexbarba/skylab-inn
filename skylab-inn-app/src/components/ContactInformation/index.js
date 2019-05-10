@@ -36,7 +36,7 @@ export default function ContactInformation({ onEditContactInfo, onUpdateContactI
                 <div className='line' />
                 <a href={`mailto:${email}`} target='_top'><i className='far fa-envelope icon'></i>&nbsp;{email ? email : ''}</a>
                 {telephone ? <a href={`https://api.whatsapp.com/send?phone=${telephone}`} target='_blank' rel="noopener noreferrer"><i className='fab fa-whatsapp icon'/>&nbsp;{telephone}</a> : <i className='fab fa-whatsapp icon--left'/>}
-                {git ? <a href={`https://github.com/${git}`} target='_blank' rel="noopener noreferrer"><i className='fab fa-github icon'></i>&nbsp;{git}</a> : <i className='fab fa-linkedin icon--left'/>}
+                {git ? <a href={`https://github.com/${git}`} target='_blank' rel="noopener noreferrer"><i className='fab fa-github icon'></i>&nbsp;{git}</a> : <i className='fab fa-github icon--left'/>}
                 {linkedin ? <a href={`https://www.linkedin.com/in/${linkedin}`} target='_blank' rel="noopener noreferrer"><i className='fab fa-linkedin icon'></i>&nbsp;{linkedin}</a> : <i className='fab fa-linkedin icon--left' />}
                 {slack ? <a href={`https://skylabcoders.slack.com/messages/${slack}`} target='_blank' rel="noopener noreferrer"><i className='fab fa-slack icon'></i>&nbsp;{slack}</a> : <i className='fab fa-slack icon--left'></i> }
                 </div>

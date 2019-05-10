@@ -9,7 +9,7 @@ const logic = require('./logic')
 const router = require('./routes')
 
 
-const { env: { MONGODB_URI: DB_URL, PORT, JWT_SECRET, APP_URL, API_URL, CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET }, argv: [, , port = PORT || 8000] } = process
+const { env: { MONGODB_URI: DB_URL, PORT, JWT_SECRET, APP_URL, API_URL, CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET, EMAIL, EMAIL_PASSWORD }, argv: [, , port = PORT || 8000] } = process
 
 mongoose.connect(DB_URL, { useNewUrlParser: true })
     .then(() => {
@@ -19,6 +19,8 @@ mongoose.connect(DB_URL, { useNewUrlParser: true })
         logic.cloud_name = CLOUDINARY_CLOUD_NAME
         logic.api_key = CLOUDINARY_API_KEY
         logic.api_secret = CLOUDINARY_API_SECRET
+        logic.email= EMAIL
+        logic.email_password = EMAIL_PASSWORD
 
         const app = express()
 
